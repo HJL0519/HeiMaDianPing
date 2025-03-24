@@ -219,7 +219,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             log.error("不允许重复下单！");
         }
         try {
-            return proxy.createVoucherOrder(voucherOrder);
+            proxy.createVoucherOrder(voucherOrder);
         }finally {
             //释放锁
             lock.unlock();
